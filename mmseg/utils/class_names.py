@@ -1,6 +1,13 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from mmengine.utils import is_str
 
+def hsi_classes():
+    return [
+        'Background','Surface water','Street','Urban Fabric',
+        'Industrial, commercial and transport','Mine, dump, and construction sites',
+        'Artificial, vegetated areas','Arable Land','Permanent Crops',
+        'Pastures','Forests','Shrub','Open spaces with no vegetation','Inland wetlands'
+    ]
 
 def cityscapes_classes():
     """Cityscapes class names for external use."""
@@ -246,6 +253,12 @@ def mapillary_v2_palette():
             [111, 111, 0], [0, 0, 0]]
 
 
+def hsi_palette():
+    return [[0, 0, 0], [244, 35, 232], [70, 70, 70], [102, 102, 156],
+            [190, 153, 153], [153, 153, 153],
+            [220, 220, 0],[107, 142, 35], [152, 251, 152], 
+            [70, 130, 180],[220, 20, 60], [255, 0, 0], [0, 0, 142],[0, 0, 70]]
+
 def cityscapes_palette():
     """Cityscapes palette for external use."""
     return [[128, 64, 128], [244, 35, 232], [70, 70, 70], [102, 102, 156],
@@ -456,7 +469,8 @@ dataset_aliases = {
     'lip': ['LIP', 'lip'],
     'mapillary_v1': ['mapillary_v1'],
     'mapillary_v2': ['mapillary_v2'],
-    'bdd100k': ['bdd100k']
+    'bdd100k': ['bdd100k'],
+    'hsi': ['Hsi','hsi']
 }
 
 
